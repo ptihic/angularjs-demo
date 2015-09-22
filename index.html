@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Demo</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  	<script src="bower_components/angular/angular.js"></script>
+</head>
+<body>
+	<div>
+		<p>在输入框中尝试输入：</p>
+		<p>姓名：<input type="text" ng-model="name"></p>
+		<!--将输入的值存放在name中-->
+		<p ng-bind="name"></p>
+		<!--ng-bind把name绑定到某个innerhtml-->
+	</div>
+
+	<!--angularjs数字-->
+	<div ng-init="quantity=1;cost=5">
+		<p>总价：{{quantity*cost}}</p>
+	</div>
+	
+	<!--angularjs字符串-->
+	<div ng-init="firstname='l';lastname='ss'">
+		<p>你的姓名：{{firstname+""+lastname}}</p>
+	</div>
+
+	<!--angularjs数组-->
+	<div ng-init="arr=[1,2,3,4]">
+		<p>第三个值为：{{arr[2]}}</p>
+	</div>
+
+	<!--angularjs对象-->
+	<div ng-init="person={firstname:'l',lastname:'ss'}">
+		<p>姓为：{{person.firstname}}</p>
+	</div>
+	<div>
+	your name:<input type="text"  ng-model="yourname" placeholder="world"/>
+	</br>
+	 Hello {{yourname || 'World'}}! <!--将world替换为yourname-->
+	</div>
+	<p>3+ 2 = {{ 3 + 2 }}</p>
+</body>
+</html>
