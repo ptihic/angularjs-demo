@@ -10,7 +10,9 @@
 	<div>
 		<p>请输入你的姓名：<input type="text" ng-model="name" /></p>
 		<p ng-bind="name"></p>
-
+		<p>请输入你的姓名：<input type="text" ng-model="name" placeholder="World"/></p>
+		</br>
+		Hello {{name||'World'}}！
 	</div>
 	<div>
 		<ul>
