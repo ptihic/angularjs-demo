@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="phonecatApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  	<script src="bower_components/angular/angular.js"></script>
+  	<script src="controllers2.js"></script>
+  	<script type="phones.json"></script>
+</head>
+<body ng-controller="PhoneListCtrl">
+	Search:<input ng-model="query"/>
+	Sort by:
+	<select ng-model="orderProp">
+		<option value="name">Alphabetical</option>
+		<option value="age">Newest</option>
+	</select>
+	<ul class="phones">
+		<li ng-repeat="phone in phones|filter:query|orderBy:orderProp">
+		<span>{{phone.name}}</span>
+		<p>{{phone.snippet}}</p>
+		<p>{{phone.age}}</p>
+		</li>
+	</ul>
+	
+</body>
+</html>
