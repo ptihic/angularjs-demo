@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="directive.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  	<script src="bower_components/angular/angular.js"></script>
+  	<script src="directive.js"></script>
+  	
+</head>
+<body ng-app="demo" ng-controller="DemoController">
+    
+    <form name="form" >
+        <hr>
+         <div>
+        <p>请输入一个数字：</p>
+			<p>num：<input type="text" ng-model="ctrlFlavor"></p>
+			<p flavor="ctrlFlavor"></p>
+		</div>
+        <div  ng-model="ctrlFlavor" rn-stepper></div>
+    </form>
+  </body>
+</html>
